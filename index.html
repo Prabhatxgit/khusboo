@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavManzil - Guidance Hub</title>
+    <meta name="description" content="Career, Relationship, and Mental Health Guidance" />
+    <meta name="author" content="NavManzil" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Navigation -->
+      <nav id="navbar">
+        <div class="container">
+          <div class="nav-content">
+            <a href="#" class="logo">NavManzil</a>
+            <div class="nav-links" id="navLinks">
+              <a href="#guidance">Guidance</a>
+              <a href="#mentorship">Mentorship</a>
+              <a href="#schedule">Schedule</a>
+              <a href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-buttons">
+              <button class="btn btn-secondary">Sign In</button>
+              <button class="btn btn-primary">Get Started</button>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Your Journey to Growth & Well-being Begins Here</h1>
+            <p>Expert guidance for career, relationships, and mental health, all in one place.</p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary btn-large">Get Started</button>
+              <button class="btn btn-secondary btn-large">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guidance Selector -->
+      <section id="guidance" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Choose Your Path</div>
+            <h2>What kind of guidance are you looking for?</h2>
+            <p>Select the area where you need support and guidance. Our mentors specialize in various fields to provide personalized assistance.</p>
+          </div>
+          
+          <div class="guidance-options">
+            <div class="guidance-card" data-type="career">
+              <div class="card-icon">🎓</div>
+              <h3>Career & Academics</h3>
+              <p>Get expert guidance on career choices, academic planning, and professional development.</p>
+              <button class="btn btn-outline">Select</button>
+            </div>
+            
+            <div class="guidance-card" data-type="relationships">
+              <div class="card-icon">❤️</div>
+              <h3>Love & Relationships</h3>
+              <p>Navigate relationship challenges with the help of experienced relationship counselors.</p>
+              <button class="btn btn-outline">Select</button>
+            </div>
+            
+            <div class="guidance-card" data-type="mental">
+              <div class="card-icon">🧠</div>
+              <h3>Mental Well-being</h3>
+              <p>Support for managing stress, anxiety, and building emotional resilience.</p>
+              <button class="btn btn-outline">Select</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscription Options -->
+      <section id="pricing" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Subscription Options</div>
+            <h2>Choose a Plan That Works for You</h2>
+            <p>We offer flexible subscription options to meet your needs.</p>
+          </div>
+          
+          <div class="user-type-selector">
+            <button class="type-btn active" data-type="student">University Student</button>
+            <button class="type-btn" data-type="professional">Professional</button>
+            <button class="type-btn" data-type="general">General</button>
+          </div>
+          
+          <div class="subscription-options">
+            <div class="pricing-card">
+              <h3>Free Trial</h3>
+              <div class="price">$0</div>
+              <p class="price-desc">per month</p>
+              <ul class="feature-list">
+                <li>Access to community forum</li>
+                <li>Basic resources & guides</li>
+                <li>Weekly group sessions</li>
+                <li>7-day access period</li>
+              </ul>
+              <button class="btn btn-outline-primary" data-plan="free">Start Free Trial</button>
+            </div>
+            
+            <div class="pricing-card popular">
+              <div class="popular-tag">Most Popular</div>
+              <h3>Basic Plan</h3>
+              <div class="price" id="basicPrice">$24.99</div>
+              <p class="price-desc">per month, billed monthly</p>
+              <ul class="feature-list">
+                <li>1 one-on-one session monthly</li>
+                <li>Weekly group sessions</li>
+                <li>Access to all resources</li>
+                <li>Priority community support</li>
+                <li>Email guidance between sessions</li>
+              </ul>
+              <button class="btn btn-primary" data-plan="basic">Select Basic Plan</button>
+            </div>
+            
+            <div class="pricing-card">
+              <h3>Premium Plan</h3>
+              <div class="price" id="premiumPrice">$49.99</div>
+              <p class="price-desc">per month, billed monthly</p>
+              <ul class="feature-list">
+                <li>4 one-on-one sessions monthly</li>
+                <li>Unlimited group sessions</li>
+                <li>Premium resources & workshops</li>
+                <li>24/7 priority support</li>
+                <li>Personalized guidance plan</li>
+                <li>Direct mentor messaging</li>
+              </ul>
+              <button class="btn btn-outline-primary" data-plan="premium">Select Premium Plan</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mentor Selection -->
+      <section id="mentorship" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Expert Mentors</div>
+            <h2>Choose Your Guide</h2>
+            <p>Our mentors are experienced professionals dedicated to helping you grow.</p>
+          </div>
+          
+          <div class="mentor-filters">
+            <button class="filter-btn active" data-filter="all">All Mentors</button>
+            <button class="filter-btn" data-filter="career">Career Experts</button>
+            <button class="filter-btn" data-filter="relationships">Relationship Coaches</button>
+            <button class="filter-btn" data-filter="mental">Mental Health Counselors</button>
+          </div>
+          
+          <div class="mentor-grid" id="mentorGrid">
+            <!-- Mentor cards will be dynamically inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Schedule -->
+      <section id="schedule" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Weekly Schedule</div>
+            <h2>Your Path to Growth & Well-being</h2>
+            <p>Our structured weekly schedule ensures consistent support and guidance.</p>
+          </div>
+          
+          <div class="schedule-section">
+            <h3>Weekday Sessions</h3>
+            <div class="schedule-grid">
+              <div class="schedule-card weekday">
+                <div class="day-header">
+                  <h4>Monday</h4>
+                  <span class="time-tag">4 PM - 6 PM</span>
+                </div>
+                <p class="session-type">Doubt Clearing Session</p>
+                <p class="session-desc">Address specific questions and challenges with quick guidance from our experts.</p>
+              </div>
+              
+              <div class="schedule-card weekday">
+                <div class="day-header">
+                  <h4>Tuesday</h4>
+                  <span class="time-tag">4 PM - 6 PM</span>
+                </div>
+                <p class="session-type">Doubt Clearing Session</p>
+                <p class="session-desc">Focus on practical solutions and actionable advice for your immediate concerns.</p>
+              </div>
+              
+              <div class="schedule-card weekday">
+                <div class="day-header">
+                  <h4>Wednesday</h4>
+                  <span class="time-tag">4 PM - 6 PM</span>
+                </div>
+                <p class="session-type">Doubt Clearing Session</p>
+                <p class="session-desc">Mid-week check-in to review progress and address any emerging challenges.</p>
+              </div>
+              
+              <div class="schedule-card weekday">
+                <div class="day-header">
+                  <h4>Thursday</h4>
+                  <span class="time-tag">4 PM - 6 PM</span>
+                </div>
+                <p class="session-type">Doubt Clearing Session</p>
+                <p class="session-desc">Specialized focus on implementing feedback and refining your approach.</p>
+              </div>
+              
+              <div class="schedule-card weekday">
+                <div class="day-header">
+                  <h4>Friday</h4>
+                  <span class="time-tag">4 PM - 6 PM</span>
+                </div>
+                <p class="session-type">Doubt Clearing Session</p>
+                <p class="session-desc">End-of-week reflection and preparation for weekend activities or assignments.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="schedule-section">
+            <h3>Weekend Mentoring</h3>
+            <div class="schedule-grid weekend-grid">
+              <div class="schedule-card weekend">
+                <div class="day-header">
+                  <h4>Saturday</h4>
+                  <span class="time-tag">10 AM - 4 PM</span>
+                </div>
+                <p class="session-type">One-on-One Mentoring</p>
+                <p class="session-desc">Personalized deep-dive sessions with your dedicated mentor to work on specific goals and challenges.</p>
+              </div>
+              
+              <div class="schedule-card weekend">
+                <div class="day-header">
+                  <h4>Sunday</h4>
+                  <span class="time-tag">10 AM - 1 PM</span>
+                </div>
+                <p class="session-type">Group Mentoring</p>
+                <p class="session-desc">Collaborative sessions with peers facing similar challenges, facilitated by experienced mentors.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="schedule-cta">
+            <button class="btn btn-primary">Get Started Today</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <div class="footer-logo">NavManzil</div>
+              <p>Your guide to personal and professional growth.</p>
+            </div>
+            
+            <div class="footer-links">
+              <div class="footer-column">
+                <h4>Navigation</h4>
+                <a href="#guidance">Guidance</a>
+                <a href="#mentorship">Mentorship</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#pricing">Pricing</a>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="mailto:support@navmanzil.com">support@navmanzil.com</a>
+                <a href="tel:+123456789">+1 (234) 567-89</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>&copy; 2023 NavManzil. All rights reserved.</p>
+            <div class="social-links">
+              <a href="#" class="social-icon">FB</a>
+              <a href="#" class="social-icon">TW</a>
+              <a href="#" class="social-icon">IG</a>
+              <a href="#" class="social-icon">LI</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
